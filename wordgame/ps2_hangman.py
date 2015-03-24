@@ -16,7 +16,7 @@ def load_words():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
     
-    Depending on the size of the word list, this function may
+    Depending on the size of the word list, this function may
     take a while to finish.
     """
     print ("Loading word list from file...")
@@ -136,13 +136,12 @@ while k<6:
             print("You got it! The word was:",word)
             break
         print("Good guess:",word_guess_string)
-        print("Your letter choices so far are:",guessed_letters)
     else:
         k=k+1
         word_guess_string=turn_word_to_string(word_guess)
-        print(word_guess_string,", you have",6-k," wrong guesses left")
-        print("Your letter choices so far are:",guessed_letters)
+        print("Incorrect: ",word_guess_string,", you have",6-k," wrong guesses left")
     print_hangman(k)
+    print("Your letter choices so far are:",guessed_letters)
 
 
 
